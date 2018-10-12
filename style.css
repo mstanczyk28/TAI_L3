@@ -1,5 +1,5 @@
 header{
-    background: black;
+    /*background: black;*/
     color: white;
     font-family: 'Advent Pro', sans-serif;
 }
@@ -27,3 +27,8 @@ body{
 .button{
     padding-top: 30px;
 }
+
+.wrapper{
+
+}
+
