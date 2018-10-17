@@ -1,95 +1,94 @@
 (function() {
     const myQuestions = [
         {
-            question: "Who is the strongest?",
+            question: "Tramwaj jakiej linii prowadził Karol Krawczyk?",
             answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "8",
+                b: "28",
+                c: "18"
             },
             correctAnswer: "c"
         },
         {
-            question: "What is the best site ever created?",
+            question: "Kto jest największym przeciwnikiem amatorskiej drużyny FC Albatros?",
             answers: {
-                a: "SitePoint",
-                b: "Simple Steps Code",
-                c: "Trick question; they're both the best"
+                a: "Orły Otwocka",
+                b: "Zamieć Piaski",
+                c: "Cegły Muranów"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Jak zaczyna się piosenka 'Sentymantalna ballada filozoficzna' Romana Kurskiego?",
+            answers: {
+                a: "Życie jak wysoka wieża, takie życie w mordę jeża...",
+                b: "Pod celą, pod celą, poezje się mielą...",
+                c: "Pod celą, pod celą, majową niedzielą..."
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Jak nazywają się rodzice Karola?",
+            answers: {
+                a: "Jadwiga i Edward",
+                b: "Zofia i Karol",
+                c: "Zofia i Edward"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "Na czym z poniższych Karol Krawczyk NIE próbował zarobić pieniędzy?",
+            answers: {
+                a: "na snakołykach z psiej karmy",
+                b: "na barze szybkiej obsługi",
+                c: "na odblaskowej paście do butów"
             },
             correctAnswer: "c"
         },
         {
-            question: "Where is Waldo really?",
+            question: "'Tramwaj pędzi po prostej i po rondzie, a w nim motorniczy o głupim wyglądzie' to fragment utworu ułożonego przez Krawczyka i Norka:",
             answers: {
-                a: "Antarctica",
-                b: "Exploring the Pacific Ocean",
-                c: "Sitting in a tree",
-                d: "Minding his own business, so stop asking"
-            },
-            correctAnswer: "d"
-        },
-        {
-            question: "Who is the strongest?",
-            answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "do występu świątecznego dla rozbawienia Marszałka",
+                b: "w ramach pracy zespołu 'Kanalersi'",
+                c: "do gazetki tramwajarskiej 'Pantograf'"
             },
             correctAnswer: "c"
         },
         {
-            question: "Who is the strongest?",
+            question: "Karol Krawczyk znany jest z tego, że często w swojej pracy:",
             answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "jeździ przy otwartych drzwiach",
+                b: "przygniata staruszki drzwiami",
+                c: "zapomina zatrzymać się na każdym przystanku"
             },
-            correctAnswer: "c"
+            correctAnswer: "b"
         },
         {
-            question: "Who is the strongest?",
+            question: "W jakiej drużynie piłkarskiej grają Tadziu i Karol?",
             answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "Albinosy",
+                b: "Albatrosy",
+                c: "Abiturenci"
             },
-            correctAnswer: "c"
+            correctAnswer: "b"
         },
         {
-            question: "Who is the strongest?",
+            question: "Jak Karol zwraca się do swojej teściowej?",
             answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "Mamusia",
+                b: "Teściowa",
+                c: "Wiedźma"
             },
-            correctAnswer: "c"
+            correctAnswer: "a"
         },
         {
-            question: "Who is the strongest?",
+            question: "Jaki brzmi tekst Danusi, aby Norek poszedł do mieszkania?",
             answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
+                a: "Tadeuszu, czy mógłbyś udac się do mieszkania?",
+                b: "Tadzik, na górę!",
+                c: "Ręce do góry i chodź na mną!"
             },
-            correctAnswer: "c"
-        },
-        {
-            question: "Who is the strongest?",
-            answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Who is the strongest?",
-            answers: {
-                a: "Superman",
-                b: "The Terminator",
-                c: "Waluigi, obviously"
-            },
-            correctAnswer: "c"
+            correctAnswer: "b"
         }
     ];
 
@@ -107,19 +106,19 @@
                 // ...add an HTML radio button
                 answers.push(
                     `<label>
-             <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter} :
-              ${currentQuestion.answers[letter]}
-           </label>`
+                     <input type="radio" name="question${questionNumber}" value="${letter}">
+                      ${letter} :
+                      ${currentQuestion.answers[letter]}
+                   </label>`
                 );
             }
 
             // add this question and its answers to the output
             output.push(
                 `<div class="slide">
-           <div class="question"> ${currentQuestion.question} </div>
-           <div class="answers"> ${answers.join("")} </div>
-         </div>`
+                   <div class="question"> ${currentQuestion.question} </div>
+                   <div class="answers"> ${answers.join("")} </div>
+                 </div>`
             );
         });
 

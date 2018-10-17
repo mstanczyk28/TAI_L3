@@ -1,8 +1,3 @@
-/**
- * @author Sławomir Kokłowski {@link http://www.kurshtml.edu.pl}
- * @copyright NIE usuwaj tego komentarza! (Do NOT remove this comment!)
- */
-
 Date.prototype.date = function(format)
 {
     for (var i = 0, c = '', returner = '', formats = new Object(); i < format.length; i++)
@@ -22,15 +17,15 @@ Date.prototype.date = function(format)
                     formats[c] = (day < 10 ? '0' : '') + day;
                     break;
                 case 'D':
-                    var days = new Array('Nie', 'Pon', 'Wto', 'Śro', 'Czw', 'Pią', 'Sob');
+                    var days = new Array('Nd', 'Pon', 'Wt', 'Sro', 'Czw', 'Pt', 'Sob');
                     formats[c] = days[this.getDay()];
                     break;
                 case 'E':
-                    var month = new Array('stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'pazdziernika', 'listopada', 'grudnia');
+                    var month = new Array('stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'wrzesnia', 'pizdziernika', 'listopada', 'grudnia');
                     formats[c] = month[this.getMonth()];
                     break;
                 case 'F':
-                    var month = new Array('Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień');
+                    var month = new Array('Styczen', 'Luty', 'Marzec', 'Kwiecien', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpien', 'Wrzesien', 'Pizdziernik', 'Listopad', 'Grudzien');
                     formats[c] = month[this.getMonth()];
                     break;
                 case 'g':
@@ -55,7 +50,7 @@ Date.prototype.date = function(format)
                     formats[c] = this.getDate();
                     break;
                 case 'l':
-                    var days = new Array('Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota');
+                    var days = new Array('Niedziela', 'Poniedzialek', 'Wtorek', 'Sroda', 'Czwartek', 'Piatek', 'Sobota');
                     formats[c] = days[this.getDay()];
                     break;
                 case 'L':
@@ -66,7 +61,7 @@ Date.prototype.date = function(format)
                     formats[c] = (month < 10 ? '0' : '') + month;
                     break;
                 case 'M':
-                    var month = new Array('Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sień', 'Wrz', 'Paź', 'Lis', 'Gru');
+                    var month = new Array('Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sien', 'Wrz', 'Paz', 'Lis', 'Gru');
                     formats[c] = month[this.getMonth()];
                     break;
                 case 'n':
