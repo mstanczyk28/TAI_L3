@@ -190,11 +190,11 @@
     }
 
     function showNextSlide() {
-        showSlide(currentSlide + 1);
+        showSlide(currentSlide + 1);move();
     }
 
     function showPreviousSlide() {
-        showSlide(currentSlide - 1);
+        showSlide(currentSlide - 1);moveBack();
     }
 
     const quizContainer = document.getElementById("quiz");
@@ -215,4 +215,15 @@
     submitButton.addEventListener("click", showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
+
+    var progressWidth = 10;
+    let progressBar = document.querySelector('#step');
+    function move() {
+        progressWidth += 10;
+        progressBar.style.width = progressWidth + '%';
+    }
+    function moveBack() {
+        progressWidth -= 10;
+        progressBar.style.width = progressWidth + '%';
+    }
 })();
